@@ -1,0 +1,52 @@
+.depo-frame {
+    width: 80%;
+    margin: 4rem;
+}
+
+.depo-content {
+    width: 100%;
+}
+
+.depo-infos {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depo-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.depo-info>div:first-child {
+    font-weight: 600;
+}
+
+.depo-info > input {
+    margin: 0 1rem;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 1.4rem;
+    border: 1px solid #c6c6c6;
+}
+
+.depo-hint > button {
+    margin: 0 0.3rem 1rem 0.3rem;
+}
+
+.depo-summit > button {
+    padding: 0.4rem 2rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.depo-result {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
