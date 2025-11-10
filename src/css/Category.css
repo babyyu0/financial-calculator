@@ -1,0 +1,10 @@
+.category-frame {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-frame > a {
+    margin: 0 2rem;
+}
