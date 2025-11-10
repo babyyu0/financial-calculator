@@ -5,13 +5,23 @@
 
 .depo-content {
     width: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .depo-infos {
     flex-basis: 60%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.depo-results {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 5rem;
 }
 
 .depo-info {
@@ -19,6 +29,13 @@
     align-items: center;
     font-size: 1.4rem;
     margin: 1rem 0;
+}
+
+.depo-result {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 0.4rem 0;
 }
 
 .depo-info>div:first-child {
@@ -33,6 +50,13 @@
     border: 1px solid #c6c6c6;
 }
 
+.depo-result > div:nth-child(2) {
+    margin: 0 1rem;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
 .depo-hint > button {
     margin: 0 0.3rem 1rem 0.3rem;
 }
@@ -44,9 +68,11 @@
     font-weight: 600;
 }
 
-.depo-result {
-    flex-basis: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.depo-result:last-child  div {
+    font-size: 2rem;
+}
+
+.depo-result:last-child  div:first-child {
+    font-weight: 600;
 }

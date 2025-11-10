@@ -1,0 +1,35 @@
+import { useState } from "react";
+import Title from "../components/Title";
+import "../css/DepositCalculator.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import DepositCalculatorInfo from "./DepositCalculatorInfo";
+
+function DepositCalculatorResult({principalAmount, preTaxInterest, afterTaxInterest}) {
+    return (
+    <div className="depo-results">
+      <div className="depo-result">
+        <div>예치금</div>
+        <div>{principalAmount.toLocaleString()}</div>
+        <div>원</div>
+      </div>
+      <div className="depo-result">
+        <div>세전 이자</div>
+        <div>{preTaxInterest.toLocaleString()}</div>
+        <div>원</div>
+      </div>
+      <div className="depo-result">
+        <div>세후 이자 (과세 15.4%)</div>
+        <div>{afterTaxInterest.toLocaleString()}</div>
+        <div></div>원
+      </div>
+      <hr />
+      <div className="depo-result">
+        <div><mark>총 수령액</mark></div>
+        <div>{(principalAmount + afterTaxInterest).toLocaleString()}</div>
+        <div>원</div>
+      </div>
+    </div>
+  );
+}
+
+export default DepositCalculatorResult;
