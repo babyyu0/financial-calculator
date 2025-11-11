@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import "../css/Category.css"
 
-function Category() {
+function Category({ active }) {
     return (
         <div className="category-frame">
-            <Link to={`/`} class="btn btn-outline-primary">예금 계산기</Link>
-            <Link to={`/`} class="btn btn-outline-primary">적금 계산기</Link>
-            <Link to={`/`} class="btn btn-outline-primary">대출 이자 계산기</Link>
+            <Link to={`/deposit`} className={`btn btn-primary ${active == 'deposit' ? 'active' : ''}`}>예금 계산기</Link>
+            <Link to={`/savings`} className={`btn btn-primary ${active == 'savings' ? 'active' : ''}`}>적금 계산기</Link>
+            <Link to={`/`} className={`btn btn-primary ${active == 'loan' ? 'active' : ''}`}>대출 이자 계산기</Link>
         </div>
     );
 };

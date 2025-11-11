@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import DepositCalculatorInfo from "./DepositCalculatorInfo";
 import DepositCalculatorResult from "./DepositCalculatorResult";
 import { flushSync } from "react-dom";
+import Category from "../components/Category";
 
 function DepositCalculator() {
   // 입력 항목
@@ -66,7 +67,7 @@ function DepositCalculator() {
   useEffect(() => {
     var rate = interestRate * 0.01 / 12; // 연 이율 
     var resultPreRate = principalAmount * depositTerm * rate;
-    var resultAfterRate = resultPreRate * 0.154;
+    var resultAfterRate = resultPreRate * 0.846;
 
     resultPreRate = Math.round(resultPreRate);
     resultAfterRate = Math.round(resultAfterRate);
@@ -78,6 +79,7 @@ function DepositCalculator() {
 
   return (
     <div className="depo-frame">
+      <Category active='deposit' />
       <Title title={`예금`} />
       <div className="depo-contents">
         <div className="depo-content">
