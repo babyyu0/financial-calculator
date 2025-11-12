@@ -1,24 +1,29 @@
+@media(max-width: 680px) {
+    html {
+        font-size: 12px;
+    }
+
+    .depo-content {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .depo-infos {
+        align-items: center !important;
+    }
+}
+
 .depo-frame {
     width: 80%;
-    margin: 4rem 4rem 8rem 4rem;
+    margin: 2rem;
+    margin-bottom: 8rem;
 }
 
 .depo-content {
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
-}
-
-@media(max-width: 680px) {
-.depo-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.depo-infos {
-    align-items: center !important;
-}
 }
 
 .depo-infos {
@@ -29,6 +34,7 @@
 }
 
 .depo-results {
+    width: 100%;
     flex-basis: 60%;
     display: flex;
     flex-direction: column;
@@ -46,7 +52,7 @@
 .depo-hint {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     font-size: 1rem;
 }
 
@@ -61,7 +67,7 @@
     font-weight: 600;
 }
 
-.depo-info > input {
+.depo-info>input {
     margin: 0 1rem;
     border-radius: 10px;
     text-align: right;
@@ -69,18 +75,18 @@
     border: 1px solid #c6c6c6;
 }
 
-.depo-result > div:nth-child(2) {
+.depo-result>div:nth-child(2) {
     margin: 0 1rem;
     border-radius: 10px;
     text-align: right;
     font-size: 1.2rem;
 }
 
-.depo-hint > button {
+.depo-hint>button {
     margin: 0 0.3rem 1rem 0.3rem;
 }
 
-.depo-summit > button {
+.depo-summit>button {
     padding: 0.4rem 2rem;
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -88,10 +94,17 @@
 }
 
 
-.depo-result:last-child  div {
+.depo-result:last-child div {
     font-size: 1.6rem;
 }
 
-.depo-result:last-child  div:first-child {
+.depo-result:last-child div:first-child {
     font-weight: 600;
+}
+
+.depo-table {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
 }

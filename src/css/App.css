@@ -1,9 +1,14 @@
+html, body {
+    width: 100%;
+}
+
+
 .footer-frame {
     position: fixed;
     bottom: 0;
     background-color: #dbdbdb;
     width: 100%;
-    padding: 2rem;
+    padding: 1.4rem;
 }
 
 .footer-frame > div {

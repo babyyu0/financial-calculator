@@ -1,24 +1,29 @@
+@media(max-width: 680px) {
+    html {
+        font-size: 12px;
+    }
+
+    .saving-content {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .saving-infos {
+        align-items: center !important;
+    }
+}
+
 .saving-frame {
     width: 80%;
-    margin: 4rem 4rem 8rem 4rem;
+    margin: 2rem;
+    margin-bottom: 8rem;
 }
 
 .saving-content {
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
-}
-
-@media(max-width: 680px) {
-.saving-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.saving-infos {
-    align-items: center !important;
-}
 }
 
 .saving-infos {
@@ -29,6 +34,7 @@
 }
 
 .saving-results {
+    width: 100%;
     flex-basis: 60%;
     display: flex;
     flex-direction: column;
@@ -46,7 +52,7 @@
 .saving-hint {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     font-size: 1rem;
 }
 
@@ -61,7 +67,7 @@
     font-weight: 600;
 }
 
-.saving-info > input {
+.saving-info>input {
     margin: 0 1rem;
     border-radius: 10px;
     text-align: right;
@@ -69,18 +75,18 @@
     border: 1px solid #c6c6c6;
 }
 
-.saving-result > div:nth-child(2) {
+.saving-result>div:nth-child(2) {
     margin: 0 1rem;
     border-radius: 10px;
     text-align: right;
     font-size: 1.2rem;
 }
 
-.saving-hint > button {
+.saving-hint>button {
     margin: 0 0.3rem 1rem 0.3rem;
 }
 
-.saving-summit > button {
+.saving-summit>button {
     padding: 0.4rem 2rem;
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -88,11 +94,11 @@
 }
 
 
-.saving-result:last-child  div {
+.saving-result:last-child div {
     font-size: 1.6rem;
 }
 
-.saving-result:last-child  div:first-child {
+.saving-result:last-child div:first-child {
     font-weight: 600;
 }
 
