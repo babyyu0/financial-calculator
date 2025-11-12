@@ -1,5 +1,5 @@
 // App.js
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import DepositeCalculator from "./pages/DepositCalculator";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import "./css/App.css"
@@ -11,6 +11,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Navigate to="/deposit" replace={true} />} />
           <Route path="/deposit" element={<DepositeCalculator />} />
           <Route path="/savings" element={<SavingsCalculator />} />
         </Routes>
