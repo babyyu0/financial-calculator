@@ -61,7 +61,7 @@ function SavingsCalculatorInfo({
         </button>
       </div>
       <div className="saving-info">
-        <div>유치 개월</div>
+        <div>적립 개월</div>
         <input type="number" className="form-control" value={savingsTerm} onChange={increaseTerm} />
         <div>개월</div>
       </div>

@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SavingsCalculatorInfo from "./SavingsCalculatorInfo";
 import SavingsCalculatorResult from "./SavingsCalculatorResult";
 import Category from "../components/Category";
+import SavingsCalculatorTable from "./SavingsCalculatorTable";
 
 function SavingsCalculator() {
   // 입력 항목
@@ -69,14 +70,15 @@ function SavingsCalculator() {
     const resultTaxArr = [];
 
     for (var i = savingsTerm; i >= 1; --i) {
-      resultTaxArr.push(savings * interest * i);
-      resultPreTaxInterest += savings * interest * i;
+      const monthTex = savings * interest * i
+      resultPreTaxInterest += monthTex;
+      resultTaxArr.push(Math.round(resultPreTaxInterest));
     }
 
-    setPrincipalAmount(savings);
+    setPrincipalAmount(savings * savingsTerm);
     setTaxArr(resultTaxArr);
-    setPreTaxInterest(resultPreTaxInterest);
-    setAfterTaxInterest(resultPreTaxInterest * 0.846);
+    setPreTaxInterest(Math.round(resultPreTaxInterest));
+    setAfterTaxInterest(Math.round(resultPreTaxInterest * 0.846));
   }, [savings, savingsTerm, interestRate]);
 
   return (
@@ -99,6 +101,7 @@ function SavingsCalculator() {
             afterTaxInterest={afterTaxInterest}
           />
         </div>
+        <SavingsCalculatorTable savings={savings} taxArr={taxArr} />
       </div>
     </div>
   );

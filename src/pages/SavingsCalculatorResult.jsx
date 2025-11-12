@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Title from "../components/Title";
-import "../css/savingsCalculator.css";
+import "../css/SavingsCalculator.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import avingsCalculatorInfo from "./SavingsCalculatorInfo";
 
@@ -8,7 +8,7 @@ function SavingsCalculatorResult({principalAmount, preTaxInterest, afterTaxInter
     return (
     <div className="saving-results">
       <div className="saving-result">
-        <div>예치금</div>
+        <div>누적 납입금</div>
         <div>{principalAmount.toLocaleString()}</div>
         <div>원</div>
       </div>

@@ -1,0 +1,16 @@
+.footer-frame {
+    position: fixed;
+    bottom: 0;
+    background-color: #dbdbdb;
+    width: 100%;
+    padding: 2rem;
+}
+
+.footer-frame > div {
+    font-weight: 600;
+}
+
+.footer-frame > a {
+    text-decoration: none;
+    color: #272727;
+}
