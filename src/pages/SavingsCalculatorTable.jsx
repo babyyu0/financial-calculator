@@ -1,6 +1,7 @@
 function SavingsCalculatorTable({ savings, taxArr }) {
   return (
     <div className="saving-table">
+      <div>월 이자 : (월 납입금) * (연 이율 / 12) * (개월 수)</div>
       <table className='table table-hover'>
         <thead>
           <tr>
